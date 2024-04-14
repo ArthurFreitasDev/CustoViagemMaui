@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:CustoViagemMaui"
              x:Class="CustoViagemMaui.App">
     <Application.Resources>
-        <Style x:Key="MainEntry" TargetType="Entry">
-            <Setter Property="Margin" Value="0, 5, 0, 5"/>
-        </Style>
+        
     </Application.Resources>
 </Application>

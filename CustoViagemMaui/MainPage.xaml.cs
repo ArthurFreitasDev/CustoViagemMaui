@@ -1,4 +1,7 @@
-﻿namespace CustoViagemMaui
+﻿using System.Collections.ObjectModel;
+using CustoViagemMaui.Models;
+
+namespace CustoViagemMaui
 {
     public partial class MainPage : ContentPage
     {
@@ -14,14 +17,14 @@
 
         }
 
-        private void AddPedagiosTela(object sender, EventArgs e)
+        private async void AddPedagiosTela(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Views.AdicionarPedagio());
         }
 
-        private void ListaPedagios(object sender, EventArgs e)
+        private async void ListaPedagios(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Views.ListaPedagios());
         }
     }
 
