@@ -30,9 +30,9 @@
                 <Button Text="Lista Pedagios" Clicked="ListaPedagios" Grid.Row="8" />
             </Grid>
             <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
-                <ImageButton Grid.Column="0" Source="C:\Users\Arthu\source\repos\CustoViagemMaui\CustoViagemMaui\Resources\Images\casa.png" MaximumHeightRequest="50"/>
-                <ImageButton Grid.Column="1" Source="C:\Users\Arthu\source\repos\CustoViagemMaui\CustoViagemMaui\Resources\Images\add.png" MaximumHeightRequest="50"/>
-                <ImageButton Grid.Column="2" Source="C:\Users\Arthu\source\repos\CustoViagemMaui\CustoViagemMaui\Resources\Images\lista.png" MaximumHeightRequest="50"/>
+                <Button Grid.Column="0" Text="+" />
+                <Button Grid.Column="1" Text="Home"/>
+                <Button Grid.Column="2" Text="Lista"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
