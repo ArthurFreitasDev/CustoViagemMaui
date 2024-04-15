@@ -4,6 +4,5 @@
              xmlns:local="clr-namespace:CustoViagemMaui"
              x:Class="CustoViagemMaui.App">
     <Application.Resources>
-        
     </Application.Resources>
 </Application>

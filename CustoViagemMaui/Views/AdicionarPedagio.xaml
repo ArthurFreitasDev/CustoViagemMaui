@@ -3,18 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustoViagemMaui.Views.AdicionarPedagio"
              Title=""
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
              BackgroundColor="#7244ce">
     <ContentPage.Resources>
         <Style TargetType="Entry">
             <Setter Property="VerticalTextAlignment" Value="Center"/>
-            <Setter Property="Margin" Value="10"/>
             <Setter Property="Margin" Value="0, 5, 0, 5"/>
+            <Setter Property="PlaceholderColor" Value="White"/>
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Margin="0,0,0,400">
             <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*" RowSpacing="10" Margin="40, 0, 40, 0">
-                <Label Text="Adicionar Pedagio" Grid.Row="0" HorizontalOptions="Center" FontSize="30"/>
+                <Label Text="Adicionar Pedagio" Grid.Row="0" HorizontalOptions="Center" FontSize="30" TextColor="White"/>
                 <Entry Placeholder="Local" x:Name="LocalPedagio" Grid.Row="1"/>
                 <Entry Placeholder="Valor" x:Name="ValorPedagio" Grid.Row="2"/>
                 <Button Text="Adicionar" Grid.Row="3"/>

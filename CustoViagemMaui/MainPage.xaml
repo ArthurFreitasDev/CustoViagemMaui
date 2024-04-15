@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustoViagemMaui.MainPage"
              Title=""
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
              BackgroundColor="#7244ce">
 
     <ContentPage.Resources>
@@ -10,26 +12,27 @@
             <Setter Property="VerticalTextAlignment" Value="Center"/>
             <Setter Property="VerticalOptions" Value="StartAndExpand"/>
             <Setter Property="Margin" Value="0, 5, 0, 5"/>
+            <Setter Property="PlaceholderColor" Value="White"/>
         </Style>
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Margin="0,0,0,150">
-            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*" ColumnDefinitions="*" RowSpacing="10" Margin="40, 0, 40, 0">
+        <StackLayout>
+            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*" ColumnDefinitions="*" RowSpacing="10" Margin="40, 0, 40, 40" >
                 <Label Text="Main" HorizontalTextAlignment="Center" Margin="30,10,30,10" Padding="10" TextColor="White" FontSize="30" FontFamily="Arial" Grid.Row="0"/>
-                <Entry Placeholder="Origem" x:Name="txtOrigem" Style="{StaticResource MainEntry}" Grid.Row="1"/>
-                <Entry Placeholder="Destino" x:Name="txtDestino" Style="{StaticResource MainEntry}" Grid.Row="2"/>
-                <Entry Placeholder="Distancia" x:Name="txtDistancia" Style="{StaticResource MainEntry}" Grid.Row="3"/>
-                <Entry Placeholder="Rendimento" x:Name="txtRendimento" Style="{StaticResource MainEntry}" Grid.Row="4"/>
-                <Entry Placeholder="Preco gas" x:Name="txtPrecoGas" Style="{StaticResource MainEntry}" Grid.Row="5"/>
+                <Entry Placeholder="Origem" x:Name="txtOrigem"  Grid.Row="1"/>
+                <Entry Placeholder="Destino" x:Name="txtDestino" Grid.Row="2"/>
+                <Entry Placeholder="Distancia" x:Name="txtDistancia" Grid.Row="3"/>
+                <Entry Placeholder="Rendimento" x:Name="txtRendimento" Grid.Row="4"/>
+                <Entry Placeholder="Preco gas" x:Name="txtPrecoGas" Grid.Row="5"/>
                 <Button Text="Calcular" Clicked="Calcular" Grid.Row="6"/>
                 <Button Text="Add Pedagio" Clicked="AddPedagiosTela" Grid.Row="7" />
                 <Button Text="Lista Pedagios" Clicked="ListaPedagios" Grid.Row="8" />
             </Grid>
-            <Grid ColumnDefinitions="*,*,*" Margin="10,10,10,0">
-                <ImageButton Grid.Column="0"/>
-                <ImageButton Grid.Column="1"/>
-                <ImageButton Grid.Column="2"/>
+            <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
+                <ImageButton Grid.Column="0" Source="C:\Users\Arthu\source\repos\CustoViagemMaui\CustoViagemMaui\Resources\Images\casa.png" MaximumHeightRequest="50"/>
+                <ImageButton Grid.Column="1" Source="C:\Users\Arthu\source\repos\CustoViagemMaui\CustoViagemMaui\Resources\Images\add.png" MaximumHeightRequest="50"/>
+                <ImageButton Grid.Column="2" Source="C:\Users\Arthu\source\repos\CustoViagemMaui\CustoViagemMaui\Resources\Images\lista.png" MaximumHeightRequest="50"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
