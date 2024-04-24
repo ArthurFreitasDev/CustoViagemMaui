@@ -5,11 +5,13 @@ namespace CustoViagemMaui
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private App PropriedadesApp;
 
         public MainPage()
         {
             InitializeComponent();
+
+            PropriedadesApp = (App)Application.Current; 
         }
 
         private void Calcular(object sender, EventArgs e)
