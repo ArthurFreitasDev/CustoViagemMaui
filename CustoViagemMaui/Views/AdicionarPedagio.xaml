@@ -17,9 +17,9 @@
         <StackLayout VerticalOptions="Center" Margin="0,0,0,400">
             <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*" RowSpacing="10" Margin="40, 0, 40, 0">
                 <Label Text="Adicionar Pedagio" Grid.Row="0" HorizontalOptions="Center" FontSize="30" TextColor="White"/>
-                <Entry Placeholder="Local" x:Name="LocalPedagio" Grid.Row="1"/>
-                <Entry Placeholder="Valor" x:Name="ValorPedagio" Grid.Row="2"/>
-                <Button Text="Adicionar" Grid.Row="3"/>
+                <Entry Placeholder="Local" x:Name="txtLocalPedagio" Grid.Row="1"/>
+                <Entry Placeholder="Valor" x:Name="txtValorPedagio" Grid.Row="2"/>
+                <Button Text="Adicionar" Grid.Row="3" Clicked="btnAdicionar"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace CustoViagemMaui.Models
     {
         string _local;
         double _valorpedagio;
+
+        [AutoIncrement, PrimaryKey]
         public int NumeroPedagio { get; set; }
 
         public double ValorPedagio
