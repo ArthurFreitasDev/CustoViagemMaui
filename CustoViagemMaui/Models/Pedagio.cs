@@ -27,7 +27,7 @@ namespace CustoViagemMaui.Models
                 if(!double.TryParse(value.ToString(), out _valorpedagio))
                     _valorpedagio = 0.0;
 
-                if (_valorpedagio > 0)
+                if (_valorpedagio < 0)
                     throw new Exception("Valor inválido");
 
                 _valorpedagio = value;

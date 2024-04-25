@@ -3,5 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustoViagemMaui.Views.ListaPedagios"
              Title="ListaPedagios">
-    
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <ListView x:Name="lstPedagios" ItemSelected="lstPedagios_ItemSelected">
+                <ListView.Header>
+                    <Grid ColumnDefinitions="*,3*,2*">
+                        <Label Grid.Column="0" Text="Numero"/>
+                        <Label Grid.Column="1" Text="Nome"/>
+                        <Label Grid.Column="2" Text="Valor"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked"/>
+                            </ViewCell.ContextActions>
+                            <Grid ColumnDefinitions="*, 3*, 2*">
+                                <Label Grid.Column="0" Text="{Binding NumeroPedagio}"/>
+                                <Label Grid.Column="1" Text="{Binding Local}"/>
+                                <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -11,18 +11,20 @@ public partial class AdicionarPedagio : ContentPage
 
     private async void btnAdicionar(object sender, EventArgs e)
     {
-		try
+        try
 		{
-			Pedagio p = new Pedagio
-			{
-				ValorPedagio = Convert.ToDouble(txtValorPedagio.Text),
-				Local = txtLocalPedagio.Text,
-			};
-			
-		}
+            Pedagio p = new Pedagio
+            {
+                ValorPedagio = Convert.ToDouble(txtValorPedagio.Text),
+                Local = txtLocalPedagio.Text,
+            };
+            await App.Db.Insert(p);
+            await DisplayAlert("Sucesso", "Pedagio adicionado!", "OK");
+            await Navigation.PushAsync(new MainPage());
+        }
 		catch(Exception ex)
 		{
-
+			await DisplayAlert("Ops", ex.Message, "OK");
 		}
     }
 }

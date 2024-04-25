@@ -6,4 +6,14 @@ public partial class ListaPedagios : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void lstPedagios_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+
+    }
+
+    private void MenuItem_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
