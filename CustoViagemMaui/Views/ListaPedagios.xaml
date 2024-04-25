@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustoViagemMaui.Views.ListaPedagios"
-             Title="ListaPedagios">
+             Title=""
+             BackgroundColor="#7244ce">
     <ContentPage.Resources>
         
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <VerticalStackLayout>
-            <ListView x:Name="lstPedagios" ItemSelected="lstPedagios_ItemSelected">
+        <VerticalStackLayout HeightRequest="100">
+            <ListView x:Name="lstPedagios" ItemSelected="lstPedagios_ItemSelected" HorizontalOptions="StartAndExpand">
                 <ListView.Header>
                     <Grid ColumnDefinitions="*,3*,2*">
                         <Label Grid.Column="0" Text="Numero"/>
