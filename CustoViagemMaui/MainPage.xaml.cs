@@ -1,22 +1,28 @@
 ﻿using System.Collections.ObjectModel;
 using CustoViagemMaui.Models;
+using CustoViagemMaui.Views;
 
 namespace CustoViagemMaui
 {
     public partial class MainPage : ContentPage
     {
         private App PropriedadesApp;
-
+        double ValorTotal;
         public MainPage()
         {
             InitializeComponent();
 
-            PropriedadesApp = (App)Application.Current; 
+            PropriedadesApp = (App)Application.Current;
         }
 
-        private void Calcular(object sender, EventArgs e)
+        private async void Calcular(object sender, EventArgs e)
         {
-
+           
+            List<Pedagio> tmp = await App.Db.();
+            foreach (Pedagio p in tmp)
+            {
+                ValorTotal += p;
+            }
         }
 
         private async void AddPedagiosTela(object sender, EventArgs e)

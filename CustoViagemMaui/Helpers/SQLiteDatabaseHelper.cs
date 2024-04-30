@@ -34,6 +34,15 @@ namespace CustoViagemMaui.Helpers
             return _conn.Table<Pedagio>().ToListAsync();
         }
 
+        public Task<List<Pedagio>> GetValue()
+        {
+            string sql = "Select ";
+
+            
+
+            return Valor;
+        }
+
         public Task<int> Delete(int id)
         {
             return _conn.Table<Pedagio>().DeleteAsync(i => i.NumeroPedagio == id);
