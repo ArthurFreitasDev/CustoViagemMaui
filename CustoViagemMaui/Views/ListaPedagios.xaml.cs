@@ -6,10 +6,11 @@ public partial class ListaPedagios : ContentPage
 {
 
     ObservableCollection<Pedagio> Lista_Pedagios = new ObservableCollection<Pedagio>();
+    public ObservableCollection<Pedagio> publicLista_Pedagios { get { return Lista_Pedagios; } }
 
 	public ListaPedagios()
 	{
-		InitializeComponent();
+        InitializeComponent();
         lstPedagios.ItemsSource = Lista_Pedagios;
 	}
 

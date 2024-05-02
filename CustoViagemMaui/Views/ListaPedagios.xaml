@@ -6,28 +6,10 @@
              BackgroundColor="#7244ce">
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView x:Name="lstPedagios" ItemsSource="{Binding Pedagios} SelectedItem="lstPedagios_ItemSelected" HorizontalOptions="StartAndExpand" SelectionMode="Multiple" Margin="20,80,20,0">
-                <CollectionView.Header>
-                    <Grid ColumnDefinitions="100,180,140">
-                        <Label Grid.Column="0" Text="Numero" BackgroundColor="AliceBlue" FontSize="25"/>
-                        <Label Grid.Column="1" Text="Nome" BackgroundColor="AliceBlue" FontSize="25"/>
-                        <Label Grid.Column="2" Text="Valor" BackgroundColor="AliceBlue" FontSize="25"/>
-                    </Grid>
-                </CollectionView.Header>
+            <CollectionView x:Name="ListaPedagiosView" ItemsSource="{Binding publicLista_Pedagios}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem Text="Remover" Clicked="MenuItemRemover"/>
-                            </ViewCell.ContextActions>
-                            <StackLayout>
-                                <Grid ColumnDefinitions="*, 3*, 2*">
-                                    <Label Grid.Column="0" Text="{Binding NumeroPedagio}"/>
-                                    <Label Grid.Column="1" Text="{Binding Local}"/>
-                                    <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
-                                </Grid>
-                            </StackLayout>
-                        </ViewCell>
+                        
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
