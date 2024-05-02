@@ -18,7 +18,7 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*" RowSpacing="10" Margin="40, 0, 40, 40" >
+            <Grid RowDefinitions="*,*,*,*,*,*,*,*" ColumnDefinitions="*" RowSpacing="10" Margin="40, 0, 40, 40" >
                 <Label Text="Main" HorizontalTextAlignment="Center" Margin="30,10,30,10" Padding="10" TextColor="White" FontSize="30" FontFamily="Arial" Grid.Row="0"/>
                 <Entry Placeholder="Origem" x:Name="txtOrigem"  Grid.Row="1"/>
                 <Entry Placeholder="Destino" x:Name="txtDestino" Grid.Row="2"/>
@@ -26,14 +26,11 @@
                 <Entry Placeholder="Rendimento" x:Name="txtRendimento" Grid.Row="4"/>
                 <Entry Placeholder="Preco gas" x:Name="txtPrecoGas" Grid.Row="5"/>
                 <Button Text="Calcular" Clicked="Calcular" Grid.Row="6"/>
-                <Button Text="Add Pedagio" Clicked="AddPedagiosTela" Grid.Row="7" />
-                <Button Text="Lista Pedagios" Clicked="ListaPedagios" Grid.Row="8" />
-                <Button Text="Limpar" Clicked="Limpar"  Grid.Row="9" />
+                <Button Text="Limpar" Clicked="Limpar"  Grid.Row="7" />
             </Grid>
-            <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
-                <Button Grid.Column="0" Text="+" Clicked="AddPedagiosTela"/>
-                <Button Grid.Column="1" Text="Home" Clicked="MainPageTela"/>
-                <Button Grid.Column="2" Text="Lista" Clicked="ListaPedagios"/>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="EndAndExpand">
+                <Button Grid.Column="0" Text="Adicionar Pedagio" Clicked="AddPedagiosTela" CornerRadius="0" BorderColor="Black"/>
+                <Button Grid.Column="2" Text="Lista" Clicked="ListaPedagios" CornerRadius="0" BorderColor="Black"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

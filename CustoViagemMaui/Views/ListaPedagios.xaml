@@ -4,40 +4,38 @@
              x:Class="CustoViagemMaui.Views.ListaPedagios"
              Title=""
              BackgroundColor="#7244ce">
-    <ContentPage.Resources>
-        
-    </ContentPage.Resources>
-
     <ContentPage.Content>
-        <VerticalStackLayout HeightRequest="100">
-            <ListView x:Name="lstPedagios" ItemSelected="lstPedagios_ItemSelected" HorizontalOptions="StartAndExpand">
-                <ListView.Header>
-                    <Grid ColumnDefinitions="*,3*,2*">
-                        <Label Grid.Column="0" Text="Numero"/>
-                        <Label Grid.Column="1" Text="Nome"/>
-                        <Label Grid.Column="2" Text="Valor"/>
+        <StackLayout>
+            <CollectionView x:Name="lstPedagios" ItemsSource="{Binding Pedagios} SelectedItem="lstPedagios_ItemSelected" HorizontalOptions="StartAndExpand" SelectionMode="Multiple" Margin="20,80,20,0">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="100,180,140">
+                        <Label Grid.Column="0" Text="Numero" BackgroundColor="AliceBlue" FontSize="25"/>
+                        <Label Grid.Column="1" Text="Nome" BackgroundColor="AliceBlue" FontSize="25"/>
+                        <Label Grid.Column="2" Text="Valor" BackgroundColor="AliceBlue" FontSize="25"/>
                     </Grid>
-                </ListView.Header>
-                <ListView.ItemTemplate>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem Text="Remover" Clicked="MenuItem_Clicked"/>
+                                <MenuItem Text="Remover" Clicked="MenuItemRemover"/>
                             </ViewCell.ContextActions>
-                            <Grid ColumnDefinitions="*, 3*, 2*">
-                                <Label Grid.Column="0" Text="{Binding NumeroPedagio}"/>
-                                <Label Grid.Column="1" Text="{Binding Local}"/>
-                                <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
-                            </Grid>
-                            <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
-                                <Button Grid.Column="0" Text="+" Clicked="AddPedagiosTela"/>
-                                <Button Grid.Column="1" Text="Home" Clicked="MainPageTela"/>
-                                <Button Grid.Column="2" Text="Lista" Clicked="ListaPedagios"/>
-                            </Grid>
+                            <StackLayout>
+                                <Grid ColumnDefinitions="*, 3*, 2*">
+                                    <Label Grid.Column="0" Text="{Binding NumeroPedagio}"/>
+                                    <Label Grid.Column="1" Text="{Binding Local}"/>
+                                    <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
+                                </Grid>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </VerticalStackLayout>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="EndAndExpand">
+                <Button Grid.Column="0" Text="Adicionar Pedagio" Clicked="AddPedagiosTela" CornerRadius="0" BorderColor="Black"/>
+                <Button Grid.Column="1" Text="Home" Clicked="MainPageTela" CornerRadius="0" BorderColor="Black"/>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
+<!--https://www.c-sharpcorner.com/article/collectionview-in-net-maui/-->
 </ContentPage>

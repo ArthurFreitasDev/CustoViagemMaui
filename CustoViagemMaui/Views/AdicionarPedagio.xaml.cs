@@ -29,4 +29,19 @@ public partial class AdicionarPedagio : ContentPage
 
 
     }
+
+    private async void AddPedagiosTela(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.AdicionarPedagio());
+    }
+
+    private async void ListaPedagios(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.ListaPedagios());
+    }
+
+    private async void MainPageTela(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+    }
 }

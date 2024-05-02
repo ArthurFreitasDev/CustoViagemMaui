@@ -14,17 +14,16 @@
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Margin="0,0,0,400">
-            <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*" RowSpacing="10" Margin="40, 0, 40, 0">
+        <StackLayout>
+            <Grid ColumnDefinitions="*" RowDefinitions="*,*,*,*" RowSpacing="10" Margin="40, 100, 40, 0">
                 <Label Text="Adicionar Pedagio" Grid.Row="0" HorizontalOptions="Center" FontSize="30" TextColor="White"/>
                 <Entry Placeholder="Local" x:Name="txtLocalPedagio" Grid.Row="1"/>
                 <Entry Placeholder="Valor" x:Name="txtValorPedagio" Grid.Row="2"/>
                 <Button Text="Adicionar" Grid.Row="3" Clicked="btnAdicionar"/>
             </Grid>
-            <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
-                <Button Grid.Column="0" Text="+" Clicked="AddPedagiosTela"/>
-                <Button Grid.Column="1" Text="Home" Clicked="MainPageTela"/>
-                <Button Grid.Column="2" Text="Lista" Clicked="ListaPedagios"/>
+            <Grid ColumnDefinitions="*,*" VerticalOptions="EndAndExpand">
+                <Button Grid.Column="0" Text="Home" Clicked="MainPageTela" CornerRadius="0" BorderColor="Black"/>
+                <Button Grid.Column="1" Text="Lista" Clicked="ListaPedagios" CornerRadius="0" BorderColor="Black"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

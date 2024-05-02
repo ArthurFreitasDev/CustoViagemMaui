@@ -24,9 +24,23 @@ public partial class ListaPedagios : ContentPage
             }
         }
     }
+    private void MenuItemRemover(object sender, EventArgs e)
+    {
+
+    }
 
     private void lstPedagios_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         Pedagio? p = e.SelectedItem as Pedagio;
+    }
+
+    private async void AddPedagiosTela(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.AdicionarPedagio());
+    }
+
+    private async void MainPageTela(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
     }
 }
