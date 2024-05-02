@@ -36,11 +36,9 @@ namespace CustoViagemMaui.Helpers
 
         public Task<List<Pedagio>> GetValue()
         {
-            string sql = "Select ";
+            string sql = "Select ValorPedagio from Pedagio";
 
-            
-
-            return Valor;
+            return _conn.QueryAsync<Pedagio>(sql);
         }
 
         public Task<int> Delete(int id)
