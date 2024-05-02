@@ -29,9 +29,4 @@ public partial class ListaPedagios : ContentPage
     {
         Pedagio? p = e.SelectedItem as Pedagio;
     }
-
-    private void MenuItem_Clicked(object sender, EventArgs e)
-    {
-
-    }
 }

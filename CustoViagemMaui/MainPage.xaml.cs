@@ -62,6 +62,20 @@ namespace CustoViagemMaui
         {
             await Navigation.PushAsync(new Views.ListaPedagios());
         }
+
+        private async void MainPageTela(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+
+        private async void Limpar(object sender, EventArgs e)
+        {
+            txtOrigem.Text = "";
+            txtDistancia.Text = "";
+            txtDestino.Text = "";
+            txtPrecoGas.Text = "";
+            txtRendimento.Text = "";
+        }
     }
 
 }

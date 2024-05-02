@@ -26,5 +26,7 @@ public partial class AdicionarPedagio : ContentPage
 		{
 			await DisplayAlert("Ops", ex.Message, "OK");
 		}
+
+
     }
 }

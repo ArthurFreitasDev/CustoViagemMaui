@@ -21,6 +21,11 @@
                 <Entry Placeholder="Valor" x:Name="txtValorPedagio" Grid.Row="2"/>
                 <Button Text="Adicionar" Grid.Row="3" Clicked="btnAdicionar"/>
             </Grid>
+            <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
+                <Button Grid.Column="0" Text="+" Clicked="AddPedagiosTela"/>
+                <Button Grid.Column="1" Text="Home" Clicked="MainPageTela"/>
+                <Button Grid.Column="2" Text="Lista" Clicked="ListaPedagios"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

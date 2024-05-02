@@ -29,6 +29,11 @@
                                 <Label Grid.Column="1" Text="{Binding Local}"/>
                                 <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
                             </Grid>
+                            <Grid ColumnDefinitions="*,*,*" VerticalOptions="EndAndExpand">
+                                <Button Grid.Column="0" Text="+" Clicked="AddPedagiosTela"/>
+                                <Button Grid.Column="1" Text="Home" Clicked="MainPageTela"/>
+                                <Button Grid.Column="2" Text="Lista" Clicked="ListaPedagios"/>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
