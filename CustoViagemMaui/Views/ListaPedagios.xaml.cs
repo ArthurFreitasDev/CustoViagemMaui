@@ -11,8 +11,8 @@ public partial class ListaPedagios : ContentPage
 	public ListaPedagios()
 	{
         InitializeComponent();
-        lstPedagios.ItemsSource = Lista_Pedagios;
-	}
+        ListaPedagiosView.ItemsSource = Lista_Pedagios;
+    }
 
     protected async override void OnAppearing()
     {

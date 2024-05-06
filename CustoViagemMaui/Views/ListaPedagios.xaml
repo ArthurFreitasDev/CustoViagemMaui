@@ -6,18 +6,37 @@
              BackgroundColor="#7244ce">
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView x:Name="ListaPedagiosView" ItemsSource="{Binding publicLista_Pedagios}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <Frame BackgroundColor="#512bd4" Margin="10,10,10,10">
+                <StackLayout>
+                    <Grid ColumnDefinitions="*,*,*" Margin="10,10,10,10">
+                        <Label Text="     N°" Grid.Column="0" TextColor="White"/>
+                        <Label Text="Local" Grid.Column="1" TextColor="White"/>
+                        <Label Text="Valor" Grid.Column="2" TextColor="White"/>
+                    </Grid>
+                    <CollectionView x:Name="ListaPedagiosView" ItemsSource="{Binding publicLista_Pedagios}" Margin="0,20,0,0">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <ContentView>
+                                    <Frame BackgroundColor="White" CornerRadius="10" Margin="10,0,10,10">
+                                        <Grid ColumnDefinitions="*,*,*">
+                                            <Ellipse Stroke="White" Grid.RowSpan="2"
+                                                HorizontalOptions="Start"/>
+                                            <Label Grid.Column="0" Text="{Binding NumeroPedagio}"/>
+                                            <Label Grid.Column="1" Text="{Binding Local}"/>
+                                            <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
+                                        </Grid>
+                                    </Frame>
+                                </ContentView>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Frame>
             <Grid ColumnDefinitions="*,*" VerticalOptions="EndAndExpand">
                 <Button Grid.Column="0" Text="Adicionar Pedagio" Clicked="AddPedagiosTela" CornerRadius="0" BorderColor="Black"/>
                 <Button Grid.Column="1" Text="Home" Clicked="MainPageTela" CornerRadius="0" BorderColor="Black"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
-<!--https://www.c-sharpcorner.com/article/collectionview-in-net-maui/-->
+<!--https://www.c-sharpcorner.com/article/collectionview-in-net-maui-->
 </ContentPage>

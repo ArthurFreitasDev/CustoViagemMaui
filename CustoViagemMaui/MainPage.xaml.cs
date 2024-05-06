@@ -43,7 +43,7 @@ namespace CustoViagemMaui
 
                 ValorTotal += (distancia / rendimento) * precoGas;
 
-                await DisplayAlert("Valor total da viagem", ValorTotal.ToString(), "OK");
+                await DisplayAlert("Valor total da viagem",$"O valor total da viagem de {txtOrigem.Text} para {txtDestino.Text} custará um total de {ValorTotal.ToString()}", "OK");
 
                 ValorTotal = 0;
             }
