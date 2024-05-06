@@ -82,6 +82,9 @@
 	  <MauiXaml Update="Views\AdicionarPedagio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CalculoFinal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ListaPedagios.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

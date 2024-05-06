@@ -20,6 +20,7 @@ namespace CustoViagemMaui
             
             try
             {
+                await Navigation.PushAsync(new Views.CalculoFinal());
                 List<Pedagio> tmp = await App.Db.GetValue();
                 foreach (Pedagio p in tmp)
                 {
