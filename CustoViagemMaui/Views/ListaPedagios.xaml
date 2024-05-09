@@ -21,9 +21,9 @@
                                         <Grid ColumnDefinitions="*,*,*">
                                             <Ellipse Stroke="White" Grid.RowSpan="2"
                                                 HorizontalOptions="Start"/>
-                                            <Label Grid.Column="0" Text="{Binding NumeroPedagio}"/>
-                                            <Label Grid.Column="1" Text="{Binding Local}"/>
-                                            <Label Grid.Column="2" Text="{Binding ValorPedagio}"/>
+                                            <Label Grid.Column="0" Text="{Binding NumeroPedagio}" TextColor="Black"/>
+                                            <Label Grid.Column="1" Text="{Binding Local}" TextColor="Black"/>
+                                            <Label Grid.Column="2" Text="{Binding ValorPedagio}" TextColor="Black"/>
                                         </Grid>
                                     </Frame>
                                 </ContentView>

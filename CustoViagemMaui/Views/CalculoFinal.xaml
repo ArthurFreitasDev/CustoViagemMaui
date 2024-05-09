@@ -6,7 +6,7 @@
     <VerticalStackLayout>
         <Grid ColumnDefinitions="*, *" RowDefinitions="*,*">
             <Label Text="Origem" Grid.Column="0" Grid.Row="0"/>
-            <Label Text="{Binding Origem_text}" Grid.Column="1" Grid.Row="0"/>
+            <Label Text="{Binding Origem}" Grid.Column="1" Grid.Row="0"/>
             <Label Text="Destino" Grid.Column="0" Grid.Row="1"/>
         </Grid>
     </VerticalStackLayout>
