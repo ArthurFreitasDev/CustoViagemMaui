@@ -2,12 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CustoViagemMaui.Views.CalculoFinal"
-             Title="CalculoFinal">
+             Title=""
+             BackgroundColor="#7244ce">
     <VerticalStackLayout>
-        <Grid ColumnDefinitions="*, *" RowDefinitions="*,*">
+        <Grid ColumnDefinitions="*, *" RowDefinitions="*,*,*,*,*,*">
             <Label Text="Origem" Grid.Column="0" Grid.Row="0"/>
             <Label Text="{Binding Origem}" Grid.Column="1" Grid.Row="0"/>
             <Label Text="Destino" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="{Binding Destino}" Grid.Column="1" Grid.Row="1"/>
+            <Label Text="Distancia" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="{Binding Distancia}" Grid.Column="1" Grid.Row="2"/>
+            <Label Text="Rendimento" Grid.Column="0" Grid.Row="3"/>
+            <Label Text="{Binding Rendimento}" Grid.Column="1" Grid.Row="3"/>
+            <Label Text="Preço Gasolina" Grid.Column="0" Grid.Row="4"/>
+            <Label Text="{Binding PrecoGas}" Grid.Column="1" Grid.Row="4"/>
+            <Button Text="Calcular" Clicked="Calcular"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

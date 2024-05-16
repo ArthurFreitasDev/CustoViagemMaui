@@ -45,5 +45,7 @@ namespace CustoViagemMaui.Models
                 _local = value;
             }
         }
+
+        public double Rendimento { get; internal set; }
     }
 }

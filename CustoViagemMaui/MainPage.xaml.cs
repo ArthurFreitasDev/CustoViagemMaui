@@ -6,8 +6,7 @@ namespace CustoViagemMaui
 {
     public partial class MainPage : ContentPage
     {
-        private App PropriedadesApp;
-        double ValorTotal;
+        
         public MainPage()
         {
             InitializeComponent();
